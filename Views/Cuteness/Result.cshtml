@@ -1,0 +1,47 @@
+﻿@{
+    var cuteness = (double)ViewData["Cuteness"];
+    var img = ViewData["Image"];
+}
+<link rel="stylesheet" href="~/css/hackday.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
+
+<body>
+    <header>
+        <div class="container1">
+            <div id="MyName">
+                <h1><span class="highlight">Cute</span> Not Cute</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Cuteness" asp-action="Index">Upload</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="text-center">
+            <img class="rounded" src="@img" />
+            <div>
+                @{ if (cuteness > 50.1)
+                    {
+                        <h1 class="text-success">
+                            Cuteness: @cuteness
+                        </h1>
+                    }
+                    else
+                    {
+
+                        <h1 class="text-danger">
+                            Cuteness: @cuteness
+                        </h1>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+

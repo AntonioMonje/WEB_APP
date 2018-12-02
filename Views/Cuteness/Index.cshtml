@@ -1,0 +1,35 @@
+﻿<link rel="stylesheet" href="~/css/hackday.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
+
+<body>
+    <header>
+        <div class="container1">
+            <div id="MyName">
+                <h1><span class="highlight">Cute</span> Not Cute</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Cuteness" asp-action="Index">Upload</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <form method="post" enctype="multipart/form-data" asp-action="UploadImage">
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Upload an image using this form:</p>
+                <input type="file" name="file" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Upload" />
+            </div>
+        </div>
+    </form>
+
+    </body>
+

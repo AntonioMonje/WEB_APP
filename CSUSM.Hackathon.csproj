@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="2.1.2" />
+    <PackageReference Include="Microsoft.ProjectOxford.Vision" Version="1.0.393" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\animals\" />
+    <Folder Include="Views\Cuteness\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\animals\84686941.jpg" />
+    <Content Remove="wwwroot\images\animals\7c98ugly-animal-funny-ugly-animals.jpg" />
+    <Content Remove="wwwroot\images\animals\7559224_orig.jpg" />
+    <Content Remove="wwwroot\images\animals\animal-fox-564x500.jpg" />
+    <Content Remove="wwwroot\images\animals\images.jpg" />
+    <Content Remove="wwwroot\images\animals\maxresdefault.jpg" />
+    <Content Remove="wwwroot\images\animals\Mexican-axolotls-iStock_000010048766_Medium.jpg" />
+    <Content Remove="wwwroot\images\animals\tiny-baby-animals-1jpg.jpg" />
+    <Content Remove="wwwroot\css\hackday.css" />
+    <Content Remove="wwwroot\images\animals\cat.gif" />
+    <Content Remove="wwwroot\images\animals\zebra.png" />
+    <Content Remove="wwwroot\images\animals\Ugly.png" />
+    <Content Remove="wwwroot\images\animals\dog1.png" />
+    <Content Remove="Views\Cuteness\Results.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\animals\84686941.jpg" />
+    <None Include="wwwroot\images\animals\7c98ugly-animal-funny-ugly-animals.jpg" />
+    <None Include="wwwroot\images\animals\7559224_orig.jpg" />
+    <None Include="wwwroot\images\animals\animal-fox-564x500.jpg" />
+    <None Include="wwwroot\images\animals\images.jpg" />
+    <None Include="wwwroot\images\animals\maxresdefault.jpg" />
+    <None Include="wwwroot\images\animals\Mexican-axolotls-iStock_000010048766_Medium.jpg" />
+    <None Include="wwwroot\images\animals\tiny-baby-animals-1jpg.jpg" />
+    <None Include="wwwroot\css\hackday.css" />
+    <None Include="wwwroot\images\animals\cat.gif" />
+    <None Include="wwwroot\images\animals\zebra.png" />
+    <None Include="wwwroot\images\animals\Ugly.png" />
+    <None Include="wwwroot\images\animals\dog1.png" />
+    <None Include="Views\Cuteness\Result.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\HttpPostedFileBase.cs" />
+  </ItemGroup>
+</Project>

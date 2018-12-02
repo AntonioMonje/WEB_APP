@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+
+    if (!User.Identity.IsAuthenticated)
+    {
+        Context.Response.Redirect(Url.Action("Login", "Account"));
+
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Alejandro Monje</title>
+    <link rel="stylesheet" href="~/css/hackday.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div id="MyName">
+                <h1><span class="highlight">Cute</span> Not Cute</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Cuteness" asp-action="Index">Upload</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="container2">
+            <span class="blinking">Prepare for a cuteness overload!</span>
+            <br />
+            <a><img src="~/images/animals/cat.gif" alt="ASP.NET" class="img-responsive" /></a>
+        </div>
+    </section>
+    <section id="boxes">
+        <div class="container1">
+            <div class="box">
+                <br />
+                <br />
+                <br />
+                <img src="~/images/animals/zebra.png" alt="ASP.NET" class="img-responsive" />
+                <p>To learn more about us click the button below</p>
+                <br />
+                <a class="button_1" href="AboutMe.html">About us</a>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="box">
+                <br />
+                <br />
+                <img src="~/images/animals/dog1.png" alt="ASP.NET" class="img-responsive" />
+                <p>To see more cuteness the button below</p>
+                <br />
+                <a class="button_1" href="MyProjects.html">cuteness</a>
+            </div>
+            <div class="box">
+                <img src="~/images/animals/ugly.png" alt="ASP.NET" class="img-responsive" />
+                <p>To contact us click the button below</p>
+                <br />
+                <a class="button_1" href="Contact.html">Contact us</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
